@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, render_template, send_file
 import pandas as pd
 import io
+from flask_cors import CORS
 # import numpy as np
 app = Flask(__name__,static_folder='static')
+CORS(app)
 
 # Global variable to hold the CSV content for download
 allocation_csv_content = None
